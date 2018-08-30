@@ -63,8 +63,9 @@ The \TransView{} package provides a mechanism to pre-fetch all reads from a SAM/
 The \TransView{} package is available at bioconductor.org and can be downloaded via \Rfunction{biocLite}:
 
 <<biocLite, eval=FALSE>>=
- source("http://bioconductor.org/biocLite.R")
- biocLite("TransView")
+ if (!requireNamespace("BiocManager", quietly=TRUE))
+     install.packages("BiocManager")
+ BiocManager::install("TransView")
 @
 \newpage
 
