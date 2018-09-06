@@ -60,9 +60,9 @@ On the file storage side, the BAM file format \cite{Li09} has become the \emph{d
 
 The \TransView{} package provides a mechanism to pre-fetch all reads from a SAM/BAM file into the memory as a genome wide read density map, making it instantly accessible to the user. The SAM/BAM parser is based on the \href{http://samtools.sourceforge.net/samtools/masterTOC.html}{Samtools C API} , and the slicing functions are designed for fast random slicing and memory efficient storage. The package provides superior performance to existing methods and the density generation process is highly configurable based on flags stored in SAM/BAM files. It is compatible to paired end data sets, strand specific protocols, variable read lengths and spliced reads. Plotting facilities and accessors for read metrics derived from parsing are provided.
 
-The \TransView{} package is available at bioconductor.org and can be downloaded via \Rfunction{biocLite}:
+The \TransView{} package is available at bioconductor.org and can be installed with:
 
-<<biocLite, eval=FALSE>>=
+<<install, eval=FALSE>>=
  if (!requireNamespace("BiocManager", quietly=TRUE))
      install.packages("BiocManager")
  BiocManager::install("TransView")
