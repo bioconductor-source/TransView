@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "samtools/sam.h"
+#include <sam.h>
 #include "construct_dc.h"
 #include <stddef.h>
 

@@ -10,7 +10,6 @@ importMethodsFrom("BiocGenerics",strand)
 importMethodsFrom("IRanges",reduce,unlist,start,end,"start<-","end<-","ranges<-",mid,width,ranges)
 importMethodsFrom("GenomicRanges",as.data.frame,seqnames,names,findOverlaps,nearest)
 import(methods)
-import(Rsamtools)
 
 exportClasses(DensityContainer)
 export(plotTV,parseReads,rmTV,annotatePeaks,gtf2gr,macs2gr,peak2tss,meltPeak)
