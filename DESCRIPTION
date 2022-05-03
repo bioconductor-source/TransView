@@ -2,7 +2,7 @@ Package: TransView
 Type: Package
 Title: Read density map construction and accession. Visualization of
         ChIPSeq and RNASeq data sets
-Version: 1.41.0
+Version: 1.41.1
 Author: Julius Muller
 Maintainer: Julius Muller <ju-mu@alumni.ethz.ch>
 Description: This package provides efficient tools to generate, access
@@ -14,7 +14,7 @@ LazyLoad: yes
 Depends: methods, GenomicRanges
 Imports: BiocGenerics, S4Vectors (>= 0.9.25), IRanges, zlibbioc, gplots
 Suggests: RUnit, pasillaBamSubset, BiocManager
-LinkingTo: Rhtslib (>= 1.15.3)
+LinkingTo: Rhtslib (>= 1.99.1)
 SystemRequirements: GNU make
 biocViews: ImmunoOncology, DNAMethylation, GeneExpression, Transcription, Microarray,
         Sequencing, Sequencing, ChIPSeq, RNASeq, MethylSeq, DataImport,

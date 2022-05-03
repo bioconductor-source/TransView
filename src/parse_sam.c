@@ -134,10 +134,10 @@ void quality_check(read_metrics_t *rm,bam1_t *temp_read,user_arguments_t *user_a
 
 	if(!user_args->PAIRED){
 		rm->revcomp=bam1_strand(temp_read);
-		rm->read_length=bam_cigar2qlen(&temp_read->core,bam1_cigar(temp_read));
+		rm->read_length=bam_cigar2qlen(temp_read->core.n_cigar,bam1_cigar(temp_read));
 	} else if (bam1_ppair(temp_read) && !bam1_notprimary(temp_read)){
 		rm->revcomp=bam1_revpair(temp_read);
-		if(!user_args->READTHROUGH){rm->read_length=bam_cigar2qlen(&temp_read->core,bam1_cigar(temp_read));//sets the read length only!!
+		if(!user_args->READTHROUGH){rm->read_length=bam_cigar2qlen(temp_read->core.n_cigar,bam1_cigar(temp_read));//sets the read length only!!
 		}else if(temp_read->core.isize!=0 ){
 				if((bam1_firstr(temp_read)&&!bam1_revpair(temp_read))||(bam1_secondr(temp_read)&&bam1_mrevpair(temp_read))){
 					rm->read_length=temp_read->core.isize;
